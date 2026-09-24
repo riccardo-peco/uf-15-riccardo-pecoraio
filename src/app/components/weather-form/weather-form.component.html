@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="weather-form">
+  <div class="field">
+    <label for="latitude">Latitudine</label>
+    <input id="latitude" type="number" formControlName="latitude" step="0.0001" placeholder="es. 46.0679" />
+    @if (form.get('latitude')?.invalid && form.get('latitude')?.touched) {
+      <span class="error">Inserisci una latitudine valida (tra -90 e 90)</span>
+    }
+  </div>
+
+  <div class="field">
+    <label for="longitude">Longitudine</label>
+    <input id="longitude" type="number" formControlName="longitude" step="0.0001" placeholder="es. 11.1211" />
+    @if (form.get('longitude')?.invalid && form.get('longitude')?.touched) {
+      <span class="error">Inserisci una longitudine valida (tra -180 e 180)</span>
+    }
+  </div>
+
+  @if (form.pending) {
+    <p class="hint">Verifica delle coordinate in corso...</p>
+  }
+  @if (form.errors?.['coordinatesUnreachable'] && !form.pending) {
+    <p class="error">Non è stato possibile trovare dati meteo per queste coordinate.</p>
+  }
+
+  <button type="submit" [disabled]="form.invalid || form.pending">Cerca meteo</button>
+</form>

@@ -1,0 +1,30 @@
+.app-container {
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0 0 0.3rem;
+  color: #1c2733;
+}
+
+header p {
+  color: #6a7a8c;
+  margin: 0;
+}
+
+.loading {
+  text-align: center;
+  color: #6a7a8c;
+}
+
+.error-message {
+  text-align: center;
+  color: #c0392b;
+  font-weight: 600;
+}

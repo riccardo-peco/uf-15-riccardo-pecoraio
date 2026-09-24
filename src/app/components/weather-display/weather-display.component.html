@@ -1,0 +1,27 @@
+<div class="weather-card">
+  <div class="weather-icon">{{ icon }}</div>
+  <h2>{{ description }}</h2>
+  <p class="temperature">{{ data.current.temperature_2m }}{{ data.current_units.temperature_2m }}</p>
+
+  <div class="details">
+    <div class="detail-item">
+      <span class="label">Umidità</span>
+      <span class="value">{{ data.current.relative_humidity_2m }}{{ data.current_units.relative_humidity_2m }}</span>
+    </div>
+    <div class="detail-item">
+      <span class="label">Precipitazioni</span>
+      <span class="value">{{ data.current.precipitation }} {{ data.current_units.precipitation }}</span>
+    </div>
+    <div class="detail-item">
+      <span class="label">Copertura nuvolosa</span>
+      <span class="value">{{ data.current.cloud_cover }}{{ data.current_units.cloud_cover }}</span>
+    </div>
+    <div class="detail-item">
+      <span class="label">Vento</span>
+      <span class="value">{{ data.current.wind_speed_10m }} {{ data.current_units.wind_speed_10m }}</span>
+    </div>
+  </div>
+
+  <p class="location">Lat: {{ data.latitude }}, Lon: {{ data.longitude }} — Elevazione: {{ data.elevation }} m</p>
+  <p class="timestamp">Rilevato il: {{ data.current.time }} ({{ data.timezone }})</p>
+</div>

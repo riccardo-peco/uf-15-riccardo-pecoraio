@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(160deg, #e8f1ff 0%, #f7fbff 100%);
+  color: #1c2733;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

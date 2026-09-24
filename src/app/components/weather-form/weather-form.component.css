@@ -1,0 +1,66 @@
+.weather-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(30, 60, 100, 0.08);
+  max-width: 360px;
+  margin: 0 auto 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #33475b;
+}
+
+input {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #cbd8e6;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4d8fdd;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.82rem;
+}
+
+.hint {
+  color: #6a7a8c;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+button {
+  background: #3d7fd6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+button:disabled {
+  background: #a9c2e0;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background: #2f68b3;
+}
